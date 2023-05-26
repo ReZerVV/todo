@@ -1,41 +1,98 @@
 body {
     padding: 0px;
-    margin: 0px;
+    background: #445760;
+    font-family: monospace;
+}
+
+.message {
+    font-weight: bold;
+    font-size: 18px;
+    color: #ffffff;
 }
 
 .todo {
-    width: 100vw;
-    height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
 
 .todo-action {
-
+    width: 400px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 }
 .todo-action-input {
-    padding: 10px;
-    background: #dee2e6;
+    grid-column: 1;
+    padding: 5px;
     border: none;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 5px;
 }
 .todo-action-input:hover,
 .todo-action-input:focus,
 .todo-action-input:active {
     outline: none;
 }
-.todo-action-add {
-    background: #f8f9fa;
-    padding: 10px;
+.todo-action-newtask {
+    grid-column: 2;
+    padding: 5px;
     border: none;
-    border-radius: 0px 10px 10px 0px;
-}
-.todo-action-add:active {
-    background: #dee2e6;
+    border-radius: 5px;
+    margin-left: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffffff;
+    background: #5899e2;
 }
 
 .todo-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
 
+.task-bg {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 400px;
+    padding: 5px;
+    background: #2b373d;
+    border-radius: 5px;
+}
+.task {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.task__done {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.task__done > .task-title {
+    text-decoration: line-through;
+    color: #959595ff;
+}
+.task-id {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    color: #ffffff;
+    text-align: center;
+}
+.task-title {
+    color: #ffffff;
+}
+.task-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.task-action > span {
+    color: #ffffff;
 }
